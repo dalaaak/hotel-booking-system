@@ -1,0 +1,64 @@
+.hotel-list-page {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .hotel-list-page h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .hotel-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .hotel-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .hotel-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .hotel-item h3 {
+    color: #34495e;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .hotel-item p {
+    color: #7f8c8d;
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+  
+  .hotel-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  /* تحسين المظهر للشاشات الصغيرة */
+  @media (max-width: 768px) {
+    .hotel-list {
+      grid-template-columns: 1fr;
+    }
+    
+    .hotel-list-page {
+      padding: 1rem;
+    }
+  }

@@ -1,0 +1,161 @@
+/* src/components/SearchResults.css */
+
+.results-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.results-container h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.result-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-item h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #007bff;
+}
+
+.result-item p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.country {
+    color: #666;
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.search-results {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.result-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hotel-list-container1 {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hotel-grid1 {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+}
+
+.hotel-card1 {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.hotel-image1 {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.hotel-info1 {
+    padding: 20px;
+}
+
+.hotel-info1 h2 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.hotel-info1 p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.view-rooms-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.view-rooms-btn:hover {
+    background-color: #0056b3;
+}
+
+.comments-section {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.comments-list {
+    margin-bottom: 15px;
+}
+
+.comment {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.comment-text {
+    margin: 0;
+}
+
+.comment-meta {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 5px;
+}
+
+.add-comment textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.add-comment button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-comment button:hover {
+    background-color: #218838;
+}
+
+@media (min-width: 768px) {
+    .hotel-grid1 {
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    }
+}

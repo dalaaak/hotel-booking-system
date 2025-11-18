@@ -1,0 +1,213 @@
+.hotel-reports {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reports-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.reports-tabs button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.reports-tabs button.active {
+  background-color: #51a3eb;
+  color: white;
+}
+
+.tab-icon {
+  margin-right: 5px;
+}
+
+.report-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f5f5f5;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.filter-icon {
+  color: #666;
+}
+
+.filter-group input,
+.filter-group select {
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.chart-wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin: 20px 0;
+}
+
+.chart-icon {
+  position: absolute;
+  top: -30px;
+  right: 10px;
+  color: #666;
+  font-size: 20px;
+  z-index: 1;
+}
+
+.table-container {
+  position: relative;
+  margin-top: 20px;
+}
+
+.table-icon {
+  position: absolute;
+  top: -30px;
+  right: 10px;
+  color: #666;
+  font-size: 20px;
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.report-table th,
+.report-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.report-table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.review-card {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.star-icon {
+  color: #13c86b;
+}
+
+.review-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.reply-btn,
+.report-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.reply-btn {
+  background-color: #92ed95;
+  color: white;
+}
+
+.report-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Dark mode support */
+.dark-theme .hotel-reports {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.dark-theme .report-section {
+  background-color: #2d2d2d;
+}
+
+.dark-theme .report-table th {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-theme .report-table td {
+  border-bottom-color: #444;
+}
+
+.dark-theme .review-card {
+  background-color: #333;
+}
+
+.dark-theme .filters input,
+.dark-theme .filters select {
+  background-color: #333;
+  color: #fff;
+  border-color: #444;
+}
+
+.dark-theme .reports-tabs button {
+  color: #ccc;
+}
+
+.dark-theme .reports-tabs button.active {
+  color: #46bae0;
+  border-bottom-color: #64B5F6;
+} 
+

@@ -1,0 +1,102 @@
+/* تصميم الحاوية العامة */
+*{
+
+}
+.auth-container {
+    max-width: 500px; /* تحديد الحد الأقصى لعرض الحاوية */
+    margin: 8rem auto; /* توسيط الحاوية عمودياً وأفقياً */
+    padding: 2rem; /* إضافة حشو داخلي */
+
+    background: radial-gradient(circle,#f7c2c9, #e9f6dc);
+    border-radius: 10px; /* زوايا مدورة */
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1); /* تأثير الظل */
+}
+ 
+/* تنسيق العناوين */
+.auth-container h2 {
+    text-align: center; /* توسيط العنوان */
+    color: #6c6a6a; /* لون العنوان */
+    margin-bottom: 0.7rem; /* مسافة أسفل العنوان */
+    font-size: 50px;
+}
+
+/* تنسيق الرسائل */
+.error-message {
+    color: #ff4d4d; /* لون الرسالة الخطأ */
+    text-align: center; /* توسيط النص */
+    margin-bottom: 0.5rem; /* مسافة أسفل الرسالة */
+}
+
+.success-message {
+    color: #28a745; /* لون الرسالة النجاح */
+    text-align: center; /* توسيط النص */
+    margin-bottom: 0.5rem; /* مسافة أسفل الرسالة */
+}
+
+/* تصميم النموذج */
+form {
+    display: flex; /* استخدام flexbox لتوزيع العناصر */
+    flex-direction: column; /* تنظيم العناصر عمودياً */
+    background-color: #ffffff;
+}
+
+/* تنسيق كل مجموعة من الحقول */
+.form-group {
+    margin-bottom: 5.3rem; /* مسافة أسفل كل مجموعة */
+}
+
+label {
+    font-weight: bold; /* جعل النص غامق */
+    color: #333; /* لون النص */
+    display: flex; /* استخدام flexbox لتوزيع الأيقونات والنص */
+    align-items: center; /* محاذاة العناصر عموديًا */
+}
+
+input[type="text"],
+input[type="username"],
+input[type="password"],
+textarea {
+    padding: 0.4rem; /* إضافة حشو داخلي */
+    font-size: 1rem; /* حجم الخط */
+    gap:initial;
+    border: 2px solid #ddd; /* لون الحدود */
+    border-radius: 40px; /* زوايا مدورة */
+    width: 100%; /* عرض كامل */
+    box-sizing: border-box; /* احتساب الحشو والحدود ضمن العرض */
+}
+
+textarea {
+    height: 70px; /* ارتفاع محدد لمنطقة النص */
+    border-radius:10px;
+}
+
+/* تصميم الزر */
+button {
+    padding: 0.75rem; /* حشو داخلي */
+    font-size: 1rem; /* حجم الخط */
+   
+    color: white; /* لون النص */
+    border: none; /* إزالة الحدود */
+    border-radius: 40px; /* زوايا مدورة */
+    cursor: pointer; /* تغيير المؤشر عند التمرير */
+    transition: background-color 0.3s; /* تأثير انتقال اللون */
+}
+
+button:hover {
+    background-color: #eeb3ba; /* لون الزر عند التمرير */
+}
+
+/* تصميم رابط تسجيل الدخول */
+.register-link {
+    text-align: center; /* توسيط النص */
+    margin-top: 0.4rem; /* مسافة أعلى النص */
+}
+
+.register-link a {
+    color: #007bff; /* لون الرابط */
+    text-decoration: none; /* إزالة التسطير */
+}
+
+.register-link a:hover {
+    text-decoration: underline; /* إضافة التسطير عند التمرير */
+}

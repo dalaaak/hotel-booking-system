@@ -1,0 +1,723 @@
+/* OffersClient.css */
+
+.offers-client-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: radial-gradient(circle,#fdfdfd, #f9f9f9);
+    padding: 70px;
+    font-family: 'Tajawal', 'Segoe UI', sans-serif;
+    direction: rtl;
+}
+
+.offers-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.offers-header h1 {
+    margin: 0 0 20px;
+    font-size: 3rem;
+    color: #2d3436;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+    background: linear-gradient(135deg, #74ed56, #ec6565);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.5px;
+}
+.offers-header h1:hover {
+    transform: translateX(5px);
+    transition: transform 0.3s ease;
+    background: linear-gradient(135deg, #11b2cb, #25fc66);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .offers-header h1 ::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #11c5cb, #25fc49);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+  }
+
+.offers-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.offers-filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.filter-btn {
+    background-color: #f5f5f5;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.filter-btn.active {
+    background-color: #20a8a6;
+    color: white;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.offer-card {
+    background:radial-gradient(circle,#fedbdb, #e8fad0);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.offer-image {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.offer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.offer-card:hover .offer-image img {
+    transform: scale(1.05);
+}
+
+.offer-discount {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.offer-content {
+    padding: 15px;
+}
+
+.offer-content h3 {
+    margin: 0 0 10px 0;
+    color: #232323;
+    font-size: 1.3rem;
+}
+
+.offer-type {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.offer-dates {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.offer-dates div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.offer-status {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.active-badge, .inactive-badge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.active-badge {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.inactive-badge {
+    background-color: #c88038;
+    color: white;
+}
+
+.active-badge.large, .inactive-badge.large {
+    font-size: 1rem;
+    padding: 8px 15px;
+}
+
+/* Modal Styles */
+.offer-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.offer-modal {
+    background-color: rgb(239, 235, 221);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #333;
+    z-index: 10;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .modal-content {
+        flex-direction: row;
+    }
+}
+
+.modal-image {
+    position: relative;
+    flex: 1;
+    min-height: 250px;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    .modal-image img {
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+.modal-discount {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.modal-details {
+    flex: 1;
+    padding: 25px;
+}
+
+.modal-details h2 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.modal-type {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.modal-date-range {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.modal-date-range div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal-conditions {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.modal-conditions h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.modal-conditions p {
+    margin: 10px 0 0 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+.modal-status {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.use-offer-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.use-offer-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Active/Inactive offer card styling */
+.active-offer {
+    border: 2px solid transparent;
+}
+
+.inactive-offer {
+    opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .offers-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .offer-image {
+        height: 150px;
+    }
+    
+    .modal-details {
+        padding: 15px;
+    }
+    
+    .modal-details h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Subscription Form Styles */
+.subscription-form {
+    background: radial-gradient(circle,#fdfdfd, #f9f9f9);
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.subscription-form h3 {
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.subscription-form p {
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.subscribe-btn {
+    background: linear-gradient(135deg, #b5cb11, #fcbb25,#acdd43);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 252, 73, 0.3);
+}
+
+.cancel-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+    background: #c0392b;
+}
+
+.success-message {
+    background: #2ecc71;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.warning-message {
+    background: #f1c40f;
+    color: #444;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Subscription Section Styles */
+.subscription-section {
+    margin-top: 50px;
+    padding: 30px;
+    background: linear-gradient( #edf5e4,#fde8e8);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-section h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #74ed56, #ec6565);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subscription-section > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.subscription-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.subscription-form-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.subscription-messages {
+    max-width: 600px;
+    margin: 20px auto 0;
+}
+
+/* تحديث أنماط الرسائل */
+.success-message {
+    margin-bottom: 15px;
+}
+
+.warning-message {
+    margin-bottom: 20px;
+}
+
+/* تحسين استجابة التصميم للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .subscription-section {
+        padding: 20px;
+    }
+
+    .subscription-form-container {
+        padding: 15px;
+    }
+
+    .subscription-section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Field Icons Styles */
+.field-icon {
+    margin-right: 8px;
+    color: #666;
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    color: #444;
+    font-weight: 500;
+}
+
+.message-icon {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+.success-message, .warning-message {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.success-message {
+    background: #2ecc71;
+    color: white;
+}
+
+.warning-message {
+    background: #f1c40f;
+    color: #444;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.form-group input::placeholder {
+    color: #999;
+}
+
+/* تحسين مظهر القائمة المنسدلة */
+.form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+    padding-right: 2.5rem;
+}
+
+/* تحسين مظهر الأزرار */
+.subscribe-btn, .cancel-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 252, 73, 0.3);
+}
+
+.cancel-btn:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+/* تحديث أنماط الأيقونات لتكون في اليسار */
+.field-icon-left {
+    margin-left: 8px;
+    color: #666;
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: #444;
+    font-weight: 500;
+}
+
+.message-icon-left {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+/* تحسين مظهر القائمة المنسدلة */
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background-color: white;
+}
+
+.form-group select optgroup {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group select option {
+    padding: 8px;
+}
+
+.form-group select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* تحسين مظهر الرسائل */
+.success-message, .warning-message {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.success-message {
+    background: #2ecc71;
+    color: white;
+}
+
+.warning-message {
+    background: #f1c40f;
+    color: #444;
+}
+
+/* تحسين مظهر حقول الإدخال */
+.form-group input {
+    padding-left: 35px;
+    position: relative;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* تحسين مظهر الخيارات في القائمة المنسدلة */
+.form-group select option, 
+.form-group select optgroup {
+    padding: 10px;
+}
+
+.form-group select optgroup {
+    background-color: #f8f9fa;
+}
+
+.form-group select option:hover {
+    background-color: #e9ecef;
+} 

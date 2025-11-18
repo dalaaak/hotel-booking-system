@@ -1,0 +1,157 @@
+.notification-dashboard {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.notification-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.notification-filters {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.filter-button {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+    background: #f5f5f5;
+}
+
+.filter-button.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.notification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.notification-item {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.notification-item:hover {
+    transform: translateY(-2px);
+}
+
+.notification-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.notification-text {
+    flex: 1;
+}
+
+.notification-title {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.notification-message {
+    color: #666;
+    line-height: 1.5;
+}
+
+.notification-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #888;
+    font-size: 14px;
+}
+
+.notification-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.action-button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.action-button.primary {
+    background: #007bff;
+    color: white;
+}
+
+.action-button.secondary {
+    background: #f8f9fa;
+    color: #333;
+}
+
+.action-button:hover {
+    opacity: 0.9;
+}
+
+.notification-status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-unread {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.status-read {
+    background: #f5f5f5;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .notification-header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    .notification-filters {
+        flex-wrap: wrap;
+    }
+
+    .notification-content {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .notification-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+} 

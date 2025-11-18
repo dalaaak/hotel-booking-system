@@ -1,0 +1,124 @@
+.hotel-manager-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  h1{
+    font-size: 90px;
+    color: rgb(81, 80, 80);
+  }
+  h3{
+    font-size: 20px;
+  }
+  h2{
+    font-size: 30px;
+    color: rgb(114, 112, 112);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+ 
+
+  
+  .hotel-form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .hotel-form input,
+  .hotel-form select,
+  .hotel-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .hotel-form button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .hotel-list {
+    margin-top: 20px;
+    background: radial-gradient(circle,#edd5d8, #e4eeda);
+  }
+  
+  .hotel-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background:#ffffff ;
+  }
+  
+  .hotel-image {
+    width: 200px;
+    height: 150px;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .hotel-card button {
+    margin: 7px;
+    color: #faf7f7;
+    background: #ddc1c5;
+    
+  }
+ 
+  .hotel-list h4{
+    font-size: 30px;
+    gap: 3px;
+    color: rgb(79, 76, 76);
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+
+  }
+.room-actions button{
+  color: #948386;
+}  
+.room-images {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.room-images img {
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+.hotel-cardam {
+  display: flex;
+  align-items: center; /* لضمان محاذاة الصورة والنص */
+  justify-content: flex-start; /* تأكيد أن الصورة تبقى على اليسار */
+  margin-bottom: 25px;
+  padding: 20px; /* زيادة التباعد الداخلي */
+  border: 1px solid #ddd;
+  border-radius: 12px; /* تحسين نعومة الزوايا */
+  background: #ffffff;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* تحسين الظل */
+  max-width: 700px; /* زيادة عرض البطاقة */
+  gap: 20px; /* إضافة مسافة بين الصورة والنص */
+}
+
+.hotel-imageam {
+  width: 300px; /* زيادة عرض الصورة */
+  height: 220px; /* زيادة ارتفاع الصورة */
+  object-fit: cover; /* الحفاظ على نسبة العرض والارتفاع */
+  border-radius: 8px; /* تحسين الزوايا */
+}
+
+.hotel-cardam div {
+  flex-grow: 1; /* السماح للنص بأخذ المساحة المتبقية */
+}
+

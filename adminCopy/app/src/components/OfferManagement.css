@@ -1,0 +1,518 @@
+/* app/src/components/OfferManagement.css */
+.offer-management {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #d7d5d5, #dcead2,#f9dadf,#efeded);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    margin: auto;
+}
+
+.offer-management h2 {
+    color: #3a3737;
+    margin-bottom: 20px;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.8em;
+}
+
+.offer-management table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.offer-management th, .offer-management td {
+    border: 1px solid #efeded;
+    padding: 15px;
+    text-align: left;
+}
+
+.offer-management th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+.offer-management input {
+    margin: 10px 0;
+    padding: 12px;
+    width: calc(100% - 24px);
+    border: 1px solid #defbcb;
+    border-radius: 4px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.offer-management input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.offer-management button {
+    background: radial-gradient(circle, #d8ebc4,#b9b7b7);
+    color: rgb(50, 49, 49);
+    flex: 1;
+  padding: 0.89rem 0;
+  border: none;
+  border-radius: 19px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-size: 0.95rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  
+}
+
+.offer-management button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    
+}
+
+.icon {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+/* app/src/components/OfferManagement.css */
+.offer-list {
+    display: flex; /* استخدام flexbox لتوزيع العناصر */
+    flex-direction: column; /* ترتيب العناصر عموديًا */
+    gap: 27px; /* إضافة مسافة بين العناصر */
+}
+
+.offer-item {
+    background-color: #f9fefe; /* خلفية بيضاء */
+    border: 1px solid #d7d6d6; /* حدود خفيفة */
+    border-radius: 10px;/* زوايا مدورة */
+    padding: 26px; /* إضافة padding */
+    box-shadow: 0 23px 10px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+    transition: transform 0.2s; /* إضافة تأثير التحويل */
+}
+
+.offer-item:hover {
+    transform: translateY(-6px); /* رفع العنصر عند التحويم */
+}
+
+.offer-item h2 {
+    font-size: 1.5em; /* زيادة حجم الخط */
+    color: #333; /* لون نص داكن */
+}
+
+.offer-item p {
+    margin: 5px 0; /* إضافة هوامش بين الفقرات */
+    color: #666; /* لون نص أفتح */
+}
+
+.offer-item img {
+ /* جعل الصورة تأخذ العرض الكامل */
+    border-radius: 4px; /* زوايا مدورة للصورة */
+    margin-top: 6px; /* إضافة مسافة فوق الصورة */
+    place-items:inherit;
+    width: 100%;
+    height: 200px;
+    box-shadow: 0 23px 10px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+    object-fit: cover;
+}
+
+.offer-item .b-d button {
+    background-color: #b2121a; /* لون زر الحذف */
+    color: white;
+    border: none;
+    padding: 10px 15px; /* إضافة padding */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* إضافة تأثير التحويل */
+}
+
+  .offer-item .b-d button:hover {
+    background-color: #a42d20; /* لون أغمق عند التحويم */
+}
+
+.input-icon {
+  margin-right: 8px;
+  color: #555;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.back-button button {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.back-button button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Modern Hotel Offers Styling */
+:root {
+  --primary-color: #2a7de1;
+  --secondary-color: #f8f9fa;
+  --accent-color: #ff6b6b;
+  --text-color: #333;
+  --light-gray: #e9ecef;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+}
+
+.offer-management {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  background-color: #fff;
+}
+
+.offer-management h2 {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.offer-management h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+.offer-management p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.back-button {
+  display: block;
+  margin: 1.5rem 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+.back-button button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+}
+
+.back-button button::before {
+  content: '←';
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.back-button button:hover {
+  background-color: #1ac75f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(42, 125, 225, 0.3);
+}
+
+.offer-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.offer-item {
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.offer-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.offer-item h2 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin: 1.5rem 1.5rem 0.5rem;
+  text-align: left;
+  padding-bottom: 0;
+}
+
+.offer-item h2::after {
+  display: none;
+}
+
+.offer-item p {
+  padding: 0 1.5rem;
+  margin-bottom: 0.8rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.offer-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  order: -1;
+}
+
+.offer-item p strong {
+  color: var(--primary-color);
+}
+
+.offer-item .discount-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  z-index: 1;
+  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.4);
+}
+
+.b-d {
+  margin: 1rem 1.5rem 1.5rem;
+  text-align: center;
+}
+
+.b-d button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.b-d button::after {
+  content: '→';
+  margin-left: 8px;
+  font-size: 1.2rem;
+}
+
+.b-d button:hover {
+  background-color: #ff5252;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 107, 107, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .offer-management {
+    padding: 1.5rem;
+  }
+  
+  .offer-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .offer-management h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Loading animation */
+.offer-management .loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.loading::after {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: 5px solid var(--light-gray);
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.subscription-section {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-section h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #0a75da;
+  font-size: 2.5rem;
+}
+
+.subscription-section p {
+  text-align: center;
+  color: #413838;
+  margin-bottom: 2rem;
+}
+
+.subscription-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.input-icon {
+  margin-right: 8px;
+  color: #4CAF50;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+  outline: none;
+}
+
+.form-group input::placeholder {
+  color: #999;
+}
+
+.subscribe-button, .cancel-button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.subscribe-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.cancel-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.subscribe-button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.cancel-button:hover {
+  background-color: #fe1909;
+  transform: translateY(-2px);
+}
+
+.offer-select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background-color: white;
+  cursor: pointer;
+}
+
+.offer-select:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+  outline: none;
+}
+
+.cancel-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f7f75f;
+  border: 1px solid #ffeeba;
+  border-radius: 4px;
+  color: #f7ff12;
+}
+
+.cancel-message p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}

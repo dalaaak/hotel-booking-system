@@ -1,0 +1,173 @@
+/* التصميم الرئيسي للحاوية */
+.hotel-manager-container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* عنوان الصفحة */
+.hotel-manager-container1 h1 {
+    color: rgb(88, 88, 88);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    border-bottom: 3px solid #e4eeda;
+    padding-bottom: 10px;
+}
+
+/* نموذج إضافة/تعديل الغرفة */
+.hotel-manager-container1 input,
+.hotel-manager-container1 select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.hotel-manager-container1 input:focus,
+.hotel-manager-container1 select:focus {
+    border-color: #e4eeda;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* تصميم الأزرار */
+.hotel-manager-container1 button {
+    background-color: #a5b892;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin: 10px 5px;
+}
+
+.hotel-manager-container1 button:hover {
+    background-color: #e4eeda;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* قائمة الغرف */
+.hotel-list1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* بطاقة الغرفة */
+.room-card1 {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.room-card1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* معلومات الغرفة */
+.room-card1 h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.room-card1 p {
+    color: #7f8c8d;
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* صور الغرفة */
+.room-images1 {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px 0;
+    margin-bottom: 15px;
+}
+
+.room-images1 img {
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.room-images1 img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* أزرار التحكم في الغرفة */
+.room-actions1 {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.room-actions1 button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
+.room-actions1 button:first-child {
+    background-color: #2ecc71;
+}
+
+.room-actions1 button:last-child {
+    background-color: #e74c3c;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    .hotel-list1 {
+        grid-template-columns: 1fr;
+    }
+    
+    .hotel-manager-container1 {
+        padding: 10px;
+    }
+    
+    .room-card1 {
+        margin: 10px 0;
+    }
+}
+
+/* تأثيرات إضافية للحالة */
+.room-card1[data-status="occupied"] {
+    border-left: 4px solid #e74c3c;
+}
+
+.room-card1[data-status="available"] {
+    border-left: 4px solid #2ecc71;
+}
+
+.room-card1[data-status="maintenance"] {
+    border-left: 4px solid #f1c40f;
+}
+
+/* تنسيق حقل رفع الصور */
+input[type="file"] {
+    padding: 8px;
+    background-color: #f8f9fa;
+    border: 2px dashed #cbd5e0;
+}
+
+input[type="file"]:hover {
+    background-color: #edf2f7;
+    border-color: #a7c494;
+}

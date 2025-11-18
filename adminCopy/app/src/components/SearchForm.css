@@ -1,0 +1,43 @@
+/* src/components/SearchForm.css */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    
+    border-radius: 40px;
+    box-shadow: 0 9px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    color: #7a7979;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pp button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: #c6cebe;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #98a4b0;
+}

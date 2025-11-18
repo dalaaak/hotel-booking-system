@@ -1,0 +1,94 @@
+/* ملف CSS الخاص بصفحة البروفايل */
+
+.profile-container {
+    max-width: 600px; /* زيادة العرض الأقصى */
+    margin: 20px auto; /* إضافة مسافة أعلى وأسفل */
+    padding: 20px; /* الحفاظ على الحشوة */
+    border: none; /* إزالة الحدود */
+    border-radius: 8px; /* زوايا مستديرة أقل */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* ظل أكثر وضوحاً */
+    background: radial-gradient(circle, #e9eff1, #e0f0d5,#f8cdcd); /* لون الخلفية مع الحفاظ على الثيم */
+    align-items: center;
+}
+
+.profile {
+    margin: 10px auto; /* زيادة المسافة */
+    padding: 10px; /* زيادة الحشوة */
+    border: none; /* إزالة الحدود */
+    border-radius: 8px; /* زوايا مستديرة أقل */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* ظل أكثر وضوحاً */
+    background-color: #fff; /* لون الخلفية */
+    align-items: center;
+}
+
+.profile-info {
+    display: flex; /* استخدام flexbox */
+    align-items: center; /* محاذاة العناصر عمودياً */
+    margin-bottom: 20px; /* مساحة أسفل العنصر */
+}
+
+.profile-picture {
+    margin: 4px auto;
+    width: 120px; /* زيادة حجم الصورة */
+    height: 120px; /* زيادة حجم الصورة */
+    border-radius: 50%; /* صورة دائرية */
+    margin-right: 10px; /* زيادة المسافة بين الصورة والنص */
+    object-fit: cover; /* ملاءمة الصورة */
+}
+
+h2 {
+    text-align: center; /* محاذاة النص في الوسط */
+    margin-bottom: 15px; /* مسافة أسفل العنوان */
+    font-size: 1.5rem; /* زيادة حجم العنوان */
+}
+
+.form-group {
+    margin-bottom: 15px; /* زيادة المسافة بين الحقول */
+}
+
+input[type="text"], input[type="file"], textarea {
+    width: 100%; /* عرض كامل */
+    padding: 10px; /* زيادة الحشوة */
+    border: 1px solid #ccc; /* حدود خفيفة */
+    border-radius: 4px; /* زوايا مستديرة */
+    box-sizing: border-box; /* تضمين الحشوة والحدود في الحجم الكلي */
+    font-size: 1rem; /* زيادة حجم الخط */
+}
+
+button {
+    background-color: #1877f2; /* لون زر الحفظ مشابه لفيسبوك */
+    color: white; /* لون نص الزر */
+    padding: 10px 15px; /* زيادة الحشوة الداخلية */
+    border: none; /* لا حدود */
+    border-radius: 4px; /* زوايا مستديرة */
+    cursor: pointer; /* تغيير المؤشر عند المرور */
+    font-size: 1rem; /* زيادة حجم النص */
+    width: 100%; /* عرض كامل */
+}
+
+button:hover {
+    background-color: #165eab; /* لون مختلف عند التمرير */
+}
+
+.error-message {
+    color: red; /* لون الرسالة الخطأ */
+    text-align: center; /* محاذاة النص في الوسط */
+}
+
+.success-message {
+    color: green; /* لون الرسالة الناجحة */
+    text-align: center; /* محاذاة النص في الوسط */
+}
+.user{
+    color: #515151;
+}
+.d1{
+    
+    margin: 6px auto; /* توسيط العنصر */
+    padding: 6px; /* حشوة داخلية */
+    border: 1px solid #ccc; /* حدود خفيفة */
+    border-radius: 12px; /* زوايا مستديرة */
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    background-color: #fff; /* لون الخلفية */
+    align-items: center;
+}

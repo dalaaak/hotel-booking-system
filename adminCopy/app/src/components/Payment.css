@@ -1,0 +1,123 @@
+.payment-container {
+    min-height: 100vh;
+    padding: 2rem;
+    background: radial-gradient(circle,#f7c2c9, #e9f6dc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .payment-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .payment-card h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .booking-summary {
+    background-color: #f4f3f3;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+  
+  .booking-summary h3 {
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .booking-summary p {
+    margin: 0.5rem 0;
+    color: #666;
+  }
+  
+  .total-price {
+    font-weight: bold;
+    color: #2c3e50 !important;
+    font-size: 1.2rem;
+    margin-top: 1rem !important;
+  }
+  
+  .payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-group label {
+    color: #555;
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 0.8rem;
+    border: 1px solid #6f6f6f;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .pay-button {
+    background-color: #4CAF50;
+    color: rgb(211, 207, 207);
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .pay-button:hover {
+    background-color: #45a049;
+  }
+  
+  @media (max-width: 600px) {
+    .payment-container {
+      padding: 1rem;
+    }
+  
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .fas, .far {
+    margin-left: 8px;
+    color: #666;
+  }
+  
+  .payment-card h2 .fas,
+  .booking-summary h3 .fas {
+    color: #2c3e50;
+    font-size: 1.2em;
+  }
+  
+  .pay-button .fas {
+    margin-left: 8px;
+    color: white;
+  }
+  
+  .total-price .fas {
+    color: #28a745;
+  }
